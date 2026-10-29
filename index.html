@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="es-UY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quesería Portal Vida Sana · Marindia</title>
+  <meta name="description" content="Quesería en Marindia: quesos, dulces, aceites, granos, conservas y productos sin gluten. Abierto de lunes a sábado sobre la Paralela Norte a la Interbalnearia.">
+  <!-- DEMO: sacar esta línea cuando la web se publique para el cliente, así Google la puede mostrar. -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1d2a47">
+  <meta property="og:title" content="Quesería Portal Vida Sana · Marindia">
+  <meta property="og:description" content="Quesos, dulces, aceites, granos y conservas. Lunes a sábado de 8:30 a 18:30.">
+  <meta property="og:image" content="img/fachada.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="img/icono.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/figtree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/bitter-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Pantalla de entrada (2 segundos) -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__marca">
+      <svg class="intro__queso" viewBox="0 0 64 48" aria-hidden="true"><use href="#queso"/></svg>
+      <span class="marca__queseria">Quesería</span>
+      <span class="marca__nombre">Portal Vida Sana</span>
+    </div>
+  </div>
+
+  <!-- Ícono de queso (se reutiliza en toda la web) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="queso" viewBox="0 0 64 48">
+      <path d="M3 29 L41 5 L61 21 L61 43 L3 43 Z" fill="#e2a93b"/>
+      <path d="M3 29 L41 5 L61 21 Z" fill="#f3c766"/>
+      <circle cx="17" cy="35" r="3.2" fill="#b97f17"/>
+      <circle cx="33" cy="38" r="2.2" fill="#b97f17"/>
+      <circle cx="47" cy="33" r="3.6" fill="#b97f17"/>
+      <circle cx="56" cy="39" r="1.8" fill="#b97f17"/>
+      <circle cx="38" cy="16" r="2" fill="#d99b2e"/>
+    </symbol>
+    <symbol id="i-wsp" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z"/>
+    </symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1l-2.22 2.23Z"/>
+    </symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7Z"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/>
+    </symbol>
+    <symbol id="i-estrella" viewBox="0 0 24 24">
+      <path fill="currentColor" d="m12 17.3 6.2 3.7-1.6-7 5.4-4.7-7.2-.6L12 2 9.2 8.7 2 9.3l5.4 4.7-1.6 7z"/>
+    </symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM12 3.8c2.7 0 3 0 4 .1 2.7.1 4 1.4 4.1 4.1.1 1 .1 1.3.1 4s0 3-.1 4c-.1 2.7-1.4 4-4.1 4.1-1 .1-1.3.1-4 .1s-3 0-4-.1c-2.7-.1-4-1.4-4.1-4.1-.1-1-.1-1.3-.1-4s0-3 .1-4C4 5.3 5.3 4 8 3.9c1-.1 1.3-.1 4-.1ZM12 2c-2.7 0-3.1 0-4.1.1C4.2 2.2 2.2 4.2 2.1 7.9 2 8.9 2 9.3 2 12s0 3.1.1 4.1c.1 3.7 2.1 5.7 5.8 5.8 1 .1 1.4.1 4.1.1s3.1 0 4.1-.1c3.7-.1 5.7-2.1 5.8-5.8.1-1 .1-1.4.1-4.1s0-3.1-.1-4.1c-.1-3.7-2.1-5.7-5.8-5.8C15.1 2 14.7 2 12 2Z"/>
+    </symbol>
+  </svg>
+
+  <!-- Encabezado -->
+  <header class="header" id="header">
+    <div class="contenedor header__fila">
+      <a class="marca" href="#inicio" aria-label="Quesería Portal Vida Sana, ir al inicio">
+        <svg class="marca__icono" viewBox="0 0 64 48" aria-hidden="true"><use href="#queso"/></svg>
+        <span class="marca__textos">
+          <span class="marca__queseria">Quesería</span>
+          <span class="marca__nombre">Portal Vida Sana</span>
+        </span>
+      </a>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">
+        <span class="menu-btn__barras" aria-hidden="true"></span>
+        Menú
+      </button>
+
+      <nav class="menu" id="menu" aria-label="Secciones">
+        <a href="#productos">Productos</a>
+        <a href="#consulta">Armá tu consulta</a>
+        <a href="#visitanos">Cómo llegar</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn--oro btn--chico" href="#" data-wsp="Hola, Portal Vida Sana. Quería hacer una consulta.">
+          <svg aria-hidden="true"><use href="#i-wsp"/></svg> WhatsApp
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Portada -->
+    <section class="portada" id="inicio">
+      <div class="contenedor portada__grilla">
+        <div class="portada__texto">
+          <p class="etiqueta">Marindia · Canelones</p>
+          <h1>Quesos, dulces, aceites, granos y conservas, a la vuelta de tu casa.</h1>
+          <p class="portada__bajada">Quesería de barrio sobre la Paralela Norte a la Interbalnearia, con atención cercana y una sección de productos sin gluten.</p>
+
+          <div class="portada__botones">
+            <a class="btn btn--oro" href="#productos">Ver productos</a>
+            <a class="btn btn--linea" href="#" data-wsp="Hola, Portal Vida Sana. Quería hacer una consulta.">
+              <svg aria-hidden="true"><use href="#i-wsp"/></svg> Consultar por WhatsApp
+            </a>
+          </div>
+
+          <ul class="portada__datos">
+            <li>
+              <svg aria-hidden="true"><use href="#i-reloj"/></svg>
+              <span><strong id="estadoHoy">Lunes a sábado de 8:30 a 18:30</strong><br><span class="suave" id="estadoDetalle">Domingos cerrado</span></span>
+            </li>
+            <li>
+              <svg class="dorado" aria-hidden="true"><use href="#i-estrella"/></svg>
+              <span><strong>4,8 en Google</strong><br><a class="suave enlace" href="https://search.google.com/local/reviews?placeid=ChIJFe932bb1n5URuaZhbHBXPS8" target="_blank" rel="noopener">Leer las opiniones</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <figure class="portada__foto">
+          <img src="img/fachada.jpg" alt="Fachada de la Quesería Portal Vida Sana, con su cartel de quesos, dulces, aceites y conservas" width="983" height="827">
+        </figure>
+      </div>
+    </section>
+
+    <!-- Productos -->
+    <section class="seccion productos" id="productos">
+      <div class="contenedor">
+        <div class="seccion__encabezado">
+          <p class="etiqueta">Lo que vas a encontrar</p>
+          <h2>Productos</h2>
+          <p class="seccion__bajada">Tocá “Consultar” en lo que te interese y te respondemos por WhatsApp con precio y disponibilidad.</p>
+        </div>
+
+        <div class="tarjetas">
+          <article class="tarjeta revelar">
+            <div class="tarjeta__foto"><img src="img/quesos.jpg" alt="Heladera con quesos en hormas y trozos" loading="lazy" width="430" height="728"></div>
+            <div class="tarjeta__cuerpo">
+              <h3>Quesos</h3>
+              <p>Colonia, magro con o sin sal, muzzarella, sándwich, rallado, cheddar, ricota y quesos saborizados.</p>
+              <a class="tarjeta__accion" href="#" data-wsp="Hola, Portal Vida Sana. Quería consultar por los quesos que tienen hoy.">Consultar <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="tarjeta revelar">
+            <div class="tarjeta__foto"><img src="img/granos.jpg" alt="Bolsas de maní, semillas y granos en el mostrador" loading="lazy" width="683" height="541"></div>
+            <div class="tarjeta__cuerpo">
+              <h3>Granos y frutos secos</h3>
+              <p>Maní con y sin sal, mix de semillas, frutos secos y granos fraccionados.</p>
+              <a class="tarjeta__accion" href="#" data-wsp="Hola, Portal Vida Sana. Quería consultar por granos y frutos secos.">Consultar <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="tarjeta revelar">
+            <div class="tarjeta__foto"><img src="img/conservas.jpg" alt="Estantes con frascos de conservas y la sección sin gluten" loading="lazy" width="686" height="700"></div>
+            <div class="tarjeta__cuerpo">
+              <h3>Dulces y conservas</h3>
+              <p>Frascos de conservas, dulces y un estante con productos sin gluten.</p>
+              <a class="tarjeta__accion" href="#" data-wsp="Hola, Portal Vida Sana. Quería consultar por dulces y conservas.">Consultar <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="tarjeta revelar">
+            <div class="tarjeta__foto"><img src="img/aceites.jpg" alt="Estantes con aceites, latas y productos de almacén" loading="lazy" width="683" height="420"></div>
+            <div class="tarjeta__cuerpo">
+              <h3>Aceites y almacén</h3>
+              <p>Aceites, latas, yerba y lo que te falte para la cocina de todos los días.</p>
+              <a class="tarjeta__accion" href="#" data-wsp="Hola, Portal Vida Sana. Quería consultar por aceites y almacén.">Consultar <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+
+        <p class="aviso">
+          <svg aria-hidden="true"><use href="#i-estrella"/></svg>
+          En la pizarra de la puerta siempre hay ofertas. Como los precios cambian, consultá las ofertas vigentes por WhatsApp.
+        </p>
+      </div>
+    </section>
+
+    <!-- Armá tu consulta -->
+    <section class="seccion consulta" id="consulta">
+      <div class="contenedor consulta__grilla">
+        <div class="consulta__elegir">
+          <p class="etiqueta">Ahorrá tiempo</p>
+          <h2>Armá tu consulta</h2>
+          <p class="seccion__bajada">Marcá lo que buscás y te armamos el mensaje para mandar por WhatsApp. Así te confirman precio y si hay, antes de salir de casa.</p>
+
+          <div class="grupos" id="grupos"><!-- Se completa desde js/main.js --></div>
+        </div>
+
+        <aside class="lista" aria-live="polite">
+          <h3 class="lista__titulo">Tu consulta</h3>
+          <p class="lista__vacia" id="listaVacia">Todavía no marcaste nada. Tocá los productos de la izquierda.</p>
+          <ul class="lista__items" id="listaItems"></ul>
+
+          <label class="lista__otro" for="otroProducto">¿Buscás otra cosa?</label>
+          <input class="campo" type="text" id="otroProducto" maxlength="80" placeholder="Escribilo acá (opcional)">
+
+          <a class="btn btn--wsp btn--ancho" id="enviarConsulta" href="#" aria-disabled="true">
+            <svg aria-hidden="true"><use href="#i-wsp"/></svg> Enviar por WhatsApp
+          </a>
+          <button class="lista__borrar" id="borrarConsulta" type="button" hidden>Borrar todo</button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Visitanos -->
+    <section class="seccion visitanos" id="visitanos">
+      <div class="contenedor visitanos__grilla">
+        <div class="visitanos__info">
+          <p class="etiqueta">Cómo llegar</p>
+          <h2>Visitanos en Marindia</h2>
+
+          <div class="visitanos__pista">
+            <img src="img/carteles.jpg" alt="Carteles rojos de Quesos y Abierto en la vereda del local" loading="lazy" width="347" height="837">
+            <div>
+              <p class="visitanos__direccion">
+                <svg aria-hidden="true"><use href="#i-pin"/></svg>
+                Paralela Norte a la Interbalnearia, Marindia, Canelones
+              </p>
+              <p class="suave">Buscá los carteles rojos de <strong>QUESOS</strong> y <strong>ABIERTO</strong> en la vereda.</p>
+
+              <table class="horario" aria-label="Horario de atención">
+                <tbody id="tablaHorario"><!-- Se completa desde js/main.js --></tbody>
+              </table>
+              <p class="nota">En feriados el horario puede cambiar. Ante la duda, escribinos.</p>
+            </div>
+          </div>
+
+          <div class="visitanos__botones">
+            <a class="btn btn--oscuro" href="https://www.google.com/maps/dir/?api=1&amp;destination=Queser%C3%ADa%20Portal%20Vida%20Sana%2C%20Marindia&amp;destination_place_id=ChIJFe932bb1n5URuaZhbHBXPS8" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-pin"/></svg> Cómo llegar
+            </a>
+            <a class="btn btn--linea-oscura" href="https://search.google.com/local/writereview?placeid=ChIJFe932bb1n5URuaZhbHBXPS8" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-estrella"/></svg> Calificanos en Google
+            </a>
+            <a class="btn btn--linea-oscura" href="https://www.instagram.com/portal.vida.sana/" target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-insta"/></svg> Instagram
+            </a>
+          </div>
+        </div>
+
+        <div class="mapa">
+          <iframe title="Mapa de la Quesería Portal Vida Sana en Marindia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Queser%C3%ADa+Portal+Vida+Sana,+Marindia&amp;ll=-34.7717667,-55.82408&amp;z=16&amp;output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="seccion contacto" id="contacto">
+      <div class="contenedor contacto__grilla">
+        <div class="contacto__vias">
+          <p class="etiqueta">Contacto</p>
+          <h2>Escribinos o llamanos</h2>
+          <p class="seccion__bajada">Para algo rápido, lo mejor es WhatsApp. Si preferís, dejanos tu consulta en el formulario y te respondemos por mail.</p>
+
+          <a class="via" href="#" data-wsp="Hola, Portal Vida Sana. Quería hacer una consulta.">
+            <span class="via__icono via__icono--wsp"><svg aria-hidden="true"><use href="#i-wsp"/></svg></span>
+            <span><strong>WhatsApp</strong><span class="suave">Respondemos en el horario del local</span></span>
+          </a>
+          <a class="via" href="#" data-tel>
+            <span class="via__icono"><svg aria-hidden="true"><use href="#i-tel"/></svg></span>
+            <span><strong>Llamar</strong><span class="suave" data-tel-texto>094 096 144</span></span>
+          </a>
+          <a class="via" href="https://www.instagram.com/portal.vida.sana/" target="_blank" rel="noopener">
+            <span class="via__icono"><svg aria-hidden="true"><use href="#i-insta"/></svg></span>
+            <span><strong>Instagram</strong><span class="suave">@portal.vida.sana</span></span>
+          </a>
+        </div>
+
+        <form class="form" id="formulario" novalidate>
+          <h3 class="form__titulo">Dejanos tu consulta</h3>
+
+          <div class="form__fila">
+            <div class="form__campo">
+              <label for="f-nombre">Nombre</label>
+              <input class="campo" id="f-nombre" name="Nombre" type="text" autocomplete="given-name" maxlength="30">
+              <p class="error" id="e-nombre"></p>
+            </div>
+            <div class="form__campo">
+              <label for="f-apellido">Apellido</label>
+              <input class="campo" id="f-apellido" name="Apellido" type="text" autocomplete="family-name" maxlength="30">
+              <p class="error" id="e-apellido"></p>
+            </div>
+          </div>
+
+          <div class="form__fila">
+            <div class="form__campo">
+              <label for="f-correo">Correo electrónico</label>
+              <input class="campo" id="f-correo" name="Correo electrónico" type="email" autocomplete="email" maxlength="80" inputmode="email">
+              <p class="error" id="e-correo"></p>
+            </div>
+            <div class="form__campo">
+              <label for="f-telefono">Teléfono</label>
+              <input class="campo" id="f-telefono" name="Teléfono" type="tel" autocomplete="tel" maxlength="20" inputmode="tel" placeholder="Ej: 099 123 456">
+              <p class="error" id="e-telefono"></p>
+            </div>
+          </div>
+
+          <div class="form__campo">
+            <label for="f-tipo">Tipo de consulta</label>
+            <select class="campo" id="f-tipo" name="Tipo de consulta">
+              <option value="">Elegí una opción</option>
+              <option>Precios y disponibilidad</option>
+              <option>Busco un producto que no veo en la web</option>
+              <option>Otra consulta</option>
+            </select>
+            <p class="error" id="e-tipo"></p>
+          </div>
+
+          <div class="form__campo">
+            <label for="f-mensaje">Mensaje</label>
+            <textarea class="campo" id="f-mensaje" name="Mensaje" rows="4" maxlength="800"></textarea>
+            <p class="error" id="e-mensaje"></p>
+          </div>
+
+          <!-- Trampa para robots: las personas no la ven -->
+          <input type="checkbox" name="botcheck" class="oculto" tabindex="-1" autocomplete="off">
+
+          <button class="btn btn--oro btn--ancho" type="submit" id="f-enviar">Enviar consulta</button>
+          <p class="form__estado" id="f-estado" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="contenedor footer__grilla">
+      <div>
+        <a class="marca" href="#inicio" aria-label="Volver al inicio">
+          <svg class="marca__icono" viewBox="0 0 64 48" aria-hidden="true"><use href="#queso"/></svg>
+          <span class="marca__textos">
+            <span class="marca__queseria">Quesería</span>
+            <span class="marca__nombre">Portal Vida Sana</span>
+          </span>
+        </a>
+        <p class="footer__texto">Quesos, dulces, aceites, granos, conservas y mucho más.</p>
+      </div>
+      <div>
+        <p class="footer__titulo">Dónde estamos</p>
+        <p class="footer__texto">Paralela Norte a la Interbalnearia<br>Marindia, Canelones</p>
+      </div>
+      <div>
+        <p class="footer__titulo">Horario</p>
+        <p class="footer__texto">Lunes a sábado: 8:30 a 18:30<br>Domingo: cerrado</p>
+      </div>
+      <div>
+        <p class="footer__titulo">Contacto</p>
+        <p class="footer__texto">
+          <a href="#" data-tel><span data-tel-texto>094 096 144</span></a><br>
+          <a href="#" data-wsp="Hola, Portal Vida Sana. Quería hacer una consulta.">WhatsApp</a><br>
+          <a href="https://www.instagram.com/portal.vida.sana/" target="_blank" rel="noopener">@portal.vida.sana</a>
+        </p>
+      </div>
+    </div>
+    <div class="contenedor footer__pie">
+      <span>© <span id="anio">2026</span> Quesería Portal Vida Sana</span>
+      <span>Web hecha por Metheris Studios</span>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="wsp-flotante" href="#" data-wsp="Hola, Portal Vida Sana. Quería hacer una consulta." aria-label="Escribinos por WhatsApp">
+    <svg aria-hidden="true"><use href="#i-wsp"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
